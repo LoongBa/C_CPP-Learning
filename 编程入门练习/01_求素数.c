@@ -31,7 +31,8 @@ bool isPrime(int num) {
 }
 
 int main() {
-    system("chcp 65001 >null");
+    system("chcp 65001>nul");
+
     printf("100以内的素数：\n");
     
     for (int i = 2; i <= 100; i++) {

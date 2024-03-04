@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/_Dev_/_Repos_/Github/_CoffeeScholar_/C_CPP-Learning/编程入门练习",
-      "program": "d:/_Dev_/_Repos_/Github/_CoffeeScholar_/C_CPP-Learning/编程入门练习/build/Debug/outDebug",
+      "cwd": "d:/_Dev_/_Repos_/Github/_CoffeeScholar_/C_CPP-Learning/算法入门练习",
+      "program": "d:/_Dev_/_Repos_/Github/_CoffeeScholar_/C_CPP-Learning/算法入门练习/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

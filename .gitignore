@@ -1,1 +1,4 @@
-编程入门练习/*.exe
+*.exe
+*.o
+.vscode/settings.json
+.vscode/launch.json

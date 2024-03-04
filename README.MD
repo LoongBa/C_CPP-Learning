@@ -11,12 +11,16 @@
 ## 一、编程入门练习
 
 1. 求素数
+   
+   [求素数 C 代码](https://github.com/coffeescholar/C_CPP-Learning/blob/main/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E7%BB%83%E4%B9%A0/01_%E6%B1%82%E7%B4%A0%E6%95%B0.c)
 
-2. 33
+2. 求回文数
+   
+   [求回文数 C 代码](https://github.com/coffeescholar/C_CPP-Learning/blob/main/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E7%BB%83%E4%B9%A0/02_%E6%B1%82%E5%9B%9E%E6%96%87%E6%95%B0.c)
 
-3. 333
-
- 
+3. 求水仙花数
+   
+   [求水仙花数 C 代码](https://github.com/coffeescholar/C_CPP-Learning/blob/main/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E7%BB%83%E4%B9%A0/03_%E6%B1%82%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0.c)
 
 ## 二、算法入门练习
 

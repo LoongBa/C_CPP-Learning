@@ -4,13 +4,20 @@
 
 #define N 8
 
+// 定义数据结构，便于理解代码
 struct QueensInfo {
-    int queensPlaced;
-    int queensFound;
-    int queensToRemove;
+    int queensPlaced;   // 已放置的皇后数
+    int queensFound;    // 已找到的解数
+    int queensToRemove; // 需要移除的皇后数
 };
 
-// 打印棋盘
+/*
+ * 函数名：printBoard
+ * 功能：打印八皇后问题的棋盘
+ * 参数：
+ *     board: 二维数组表示棋盘
+ * 返回值：无
+ */
 void printBoard(int board[N][N]) {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -24,7 +31,16 @@ void printBoard(int board[N][N]) {
     }
 }
 
-// 检查当前位置是否安全
+/*
+ * 函数名：isSafe
+ * 功能：检查在棋盘上放置皇后的位置是否安全
+ * 参数：
+ *     board: 二维数组，代表棋盘
+ *     row: 当前要放置皇后的行数
+ *     col: 当前要放置皇后的列数
+ * 返回值：
+ *     bool类型，表示当前位置是否安全
+ */
 bool isSafe(const int board[N][N], int row, int col) {
     int i, j;
 
@@ -40,16 +56,23 @@ bool isSafe(const int board[N][N], int row, int col) {
     return true;
 }
 
-// 递归函数来解决八皇后问题
+/*
+ * 函数名：solveNQueens_Recursive
+ * 功能：递归求解N皇后问题
+ * 参数：
+ *     board: 二维数组表示棋盘
+ *     row: 当前处理的行数
+ * 返回值：布尔类型，表示是否成功找到解
+ */
 bool solveNQueens_Recursive(int board[N][N], int row) {
     if (row == N) {
         return true;
     }
 
-    for (int col = 0; col < N; col++) {
-        if (isSafe(board, row, col)) {
+    for (int col = 0; col < N; col++) { // 尝试在当前行的每一列放置皇后
+        if (isSafe(board, row, col)) {  // 检查当前位置是否安全
             board[row][col] = 1;
-            if (solveNQueens_Recursive(board, row + 1)) {
+            if (solveNQueens_Recursive(board, row + 1)) { // 递归处理下一行
                 return true;
             }
             board[row][col] = 0;

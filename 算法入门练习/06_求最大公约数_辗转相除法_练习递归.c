@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function to calculate the greatest common divisor (GCD) using iterative approach
+// 使用迭代方法计算最大公约数（GCD）的函数
 int gcd_Iterative(int a, int b) {
     int remainder;
     while (b != 0) {
@@ -12,7 +12,7 @@ int gcd_Iterative(int a, int b) {
     return a;
 }
 
-// Function to calculate the greatest common divisor (GCD) using recursive approach
+// 使用递归方法计算最大公约数（GCD）的函数
 int gcd_Recursive(int a, int b) {
     if (b == 0) {
         return a;

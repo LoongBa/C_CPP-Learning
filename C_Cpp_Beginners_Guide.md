@@ -12,18 +12,20 @@
 
 通过此指南，**用尽可能简单的方式**，指导初学者一步步完成 C/C++ 的编译器、开发环境等下载，**并进行安装、配置和更新**。
 
-> 本教程仅针对 Windows 10/11 版本，不推荐 Windows 7/XP，也不考虑 MacOS、Linux 等。
+> 本教程仅针对 `Windows 10/11` 版本，<u>不推荐</u> `Windows 7/XP`，本教程也<u>不考虑</u> `MacOS`、`Linux` 等系统。
 > 
-> 本教程发布和更新维护于作者陪同孩子学习 Python、C/C++ 的 Github 项目：
+> 本教程发布和更新于作者陪同孩子学习 `Python`、`C/C++` 的 `Github` 项目：
 > [GitHub - coffeescholar/C_CPP-Learning 陪小学生学习 C/C++ 练习题](https://github.com/coffeescholar/C_CPP-Learning)
 > 
-> 欢迎提出建议、意见，也欢迎赠送 Star~ 🤗❤️💕
+> [在线版本](https://github.com/coffeescholar/C_CPP-Learning/blob/main/C_Cpp_Beginners_Guide.md)、[PDF 版本，方便离线查阅](https://github.com/coffeescholar/C_CPP-Learning/blob/main/C_Cpp_Beginners_Guide.pdf)
+> 
+> 欢迎提出建议、意见，也欢迎赠送 Star~ ✨✨✨🤗❤️💕
 
 ---
 
 **三个动作如下：**
 
-1. **在线安装 `scoop`** —— 软件包部署和升级工具，以后经常会用到；
+1. **在线安装 `Scoop`** —— 软件包部署和升级工具，以后经常会用到；
 
 2. **自动安装设置 `gcc`, `gdb`** —— `GNU` 的 `C/C++` 编译器和调试器；
     ——不需要设置环境变量等等，自动完成了
@@ -43,7 +45,7 @@
 
 ## 1. 在线安装 Scoop
 
-### 1.1 运行终端
+### 1.1. 运行终端
 
 有很多种方法，这里只说最简单的：
 
@@ -65,25 +67,24 @@
 
 没有什么意外的话，稍微等一等就能看到提示完成后续安装。
 
-用 `scoop` 来安装一些开发常用的工具非常方便，后续会经常用到。
+用 `Scoop` 来安装一些开发常用的工具非常方便，后续会经常用到。
 
 其功能非常强大，远远不止这一点点，建议以后有空多了解一下。
 
 > `Scoop` 是一款适用于 `Windows` 系统的 `命令行软件（包）管理工具`，免费、开源：[官网](https://scoop.sh/)、`Github` [开源项目地址](https://link.zhihu.com/?target=https%3A//github.com/ScoopInstaller/Scoop)。
 > 
 > 简单来说，就是可以通过命令行工具（`PowerShell`、`CMD` 等）实现软件（包）的安装管理等需求，
-> 
 > **通过简单的一行代码实现软件的下载、安装、卸载、更新等操作**。
 > 
 > 其灵感来源于`macOS` 的 `Homebrew` [开源项目地址](https://github.com/Homebrew/brew)，`Mac` 用户就比较熟悉了。
 > 
 > `Scoop` 不仅可用于安装软件包，还可以更新、批量更新，甚至导出安装列表，重装系统后一次性批量安装。
 > 
-> **对于开发人员而言**，更方便安装指定版本、安装多个版本、运行指定版本，在很多情况下非常有用。
+> 尤其**对于开发人员而言**，更方便安装指定版本、安装多个版本、运行指定版本，在很多情况下非常有用。
 
 ### 1.3. 切换为国内镜像（可选，推荐）
 
-`scoop` 正常情况下是连接到 `Github.com` 来获取相应的更新数据等等，
+`Scoop` 正常情况下是连接到 `Github.com` 来获取相应的更新数据等等，
 
 因为国内访问 `Github.com` 不稳定，切换为国内镜像会比较方便一些：
 
@@ -99,7 +100,7 @@ git remote set-url origin https://gitee.com/scoop-bucket/main.git
 
 ## 2. 自动安装设置 gcc, gdb
 
-随后，用 `scoop` 帮助我们自动下载安装 `GNU` 的 `C/C++ 编译器和调试器`：`gcc`, `gdb`，`g++` 已经包含在 `gcc` 包里。
+随后，用 `Scoop` 帮助我们自动下载安装 `GNU` 的 `C/C++ 编译器和调试器`：`gcc`, `gdb`，`g++` 已经包含在 `gcc` 包里。
 
 在 `终端（命令行）界面` 粘贴或输入下面命令：
 
@@ -107,7 +108,7 @@ git remote set-url origin https://gitee.com/scoop-bucket/main.git
 scoop install gcc, gdb
 ```
 
-这个过程中，`scoop` 会自动安装所需的 `7zip`，不需要设置环境变量等等，因为 `scoop` 已经**自动完成**了。
+这个过程中，`Scoop` 会自动安装所需的 `7zip`，不需要设置环境变量等等，因为 `Scoop` 已经**自动完成**了。
 
 ---
 
@@ -128,7 +129,7 @@ gdb -v
 
 安装正确的情况下，在每个命令输出中能看到提示和版本号，如图中绿色部分：
 
-![](C:\Users\coffe\AppData\Roaming\marktext\images\2024-03-19-18-56-36-image.png)
+<img title="" src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-19-18-56-36-image.png" alt="" width="1078">
 
 ---
 
@@ -139,6 +140,7 @@ gdb -v
 同样，以后可以在 `终端（命令行）界面` 中执行下面的命令，**更新所有安装了的工具包**：
 
 ```powershell
+# 第一次会自动安装 git
 scoop update *
 ```
 
@@ -153,7 +155,7 @@ scoop update git gcc gdb
 
 ### 4.2 （可选）下载、解压缩、运行 Fastgithub.UI
 
-后续学习中，经常需要访问 Github.com，然而国内访问 Github.com 经常不稳定。
+后续学习中，经常需要访问 `Github.com`，然而国内访问 `Github.com` 经常不稳定。
 
 如果这时候总是提示网络问题，可以用 `FastGithub` 工具，开源、免费：
 
@@ -175,7 +177,7 @@ scoop update git gcc gdb
 
 **感谢原作者，也感谢这些热心的备份者和维护者（还有很多类似备份）**，**谢谢你们** 👍❤️💕
 
-> 注意：FastGithub 工具可以配置为系统服务，在 Windows 启动时自动运行，
+> 注意：`FastGithub` 工具可以配置为系统服务，在 `Windows` 启动时自动运行，
 > 
 > 这里暂不展开，有兴趣可自行查阅其项目说明，如运行原理、源代码等等：
 > 
@@ -200,15 +202,15 @@ scoop update git gcc gdb
 > 这里的 `VSCode` 全称为 `Visual Studio Code`，正是微软公司后来推出的 `免费开源 IDE`——但**两者是不同的软件**。
 > 开源社区基于免费开源的 `VSCode` 还延申出了不同的开源版本，以后可以再深入了解。
 > 
-> `JetBrains` 公司有很多非常棒的软件开发工具，比如各种编程语言的 IDE，如 `Java` 开发人员最熟悉的 `IntelliJ IDEA`，等等。
+> `JetBrains` 公司有很多非常棒的软件开发工具，比如各种编程语言的 `IDE`，如 `Java` 开发人员最熟悉的 `IntelliJ IDEA`，等等。
 > 该公司的大部分软件需要**付费购买商业授权**才能使用，例如学习 `Python` 也可以用 `PyCharm`，非常不错。
-> 在校大学生可以通过向 `JetBrains` 公司申请教育授权来免费使用，其它人则可以通过创建和维护开源项目、公益项目来申请免费试用。
+> **在校大学生**可以通过向 `JetBrains` 公司申请**教育授权**来免费使用，其它人则可以通过创建和维护开源项目、公益项目来**申请免费试用**。
 
-对于初学者，推荐用` 微软公司 `的 `VSCode`（全称：Visual Studio Code）:
+对于初学者，推荐用 `微软公司` 的 `VSCode`（全称：`Visual Studio Code`）:
 
 > **VSCode 官网：** https://code.visualstudio.com/
 > 
-> 直接下载地址：[Download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/Download)
+> **直接下载地址**：[Download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/Download)
 
 #### 4.3.1. 下载安装、配置中文语言包、配置 C/C++ 扩展
 
@@ -230,7 +232,7 @@ scoop update git gcc gdb
    
    + 同上，再安装扩展：`Code Runner`，用于运行 `C/C++`、`Python` 等等常用开发语言的代码。
 
-基本足够了，以后还会有更多好用的扩展，慢慢熟悉。
+基本足够了，以后还会有更多好用的扩展，慢慢熟悉、筛选、磨合。
 
 #### 4.3.2. 编写、运行你的第一段 `C/C++` 代码
 
@@ -239,10 +241,10 @@ scoop update git gcc gdb
 1. **新建文件夹：** 在 `VSCode` 中选择一个文件夹来保存你的代码，例如：`D:\MyCode\Learn_C`；
    
    > 注意：路径中不要带空格、中文，避免后续编译、调试时无法预料的错误。
-   > 
-   > 目前发现，主要是 `GDB 调试器` 对中文路径支持仍有问题。
+   > 目前发现，主要是调试时对中文路径支持仍有问题。
 
-2. **新建文件**：在 `VSCode` 左侧的`资源管理器`中，点右上角的 `新建文件` ，并为创建的文件取个名字比如 `HelloWorld.c`（英文），注意扩展名用 `.c` 或 `.cpp`；
+2. **新建文件**：在 `VSCode` 左侧的`资源管理器`中，点右上角的 `新建文件` ，并为创建的文件取个名字比如 `HelloWorld.c`（英文）
+   ——注意扩展名用 `.c` 或 `.cpp`，`VSCode` 会自动识别并启用对应的功能；
 
 3. **编写代码**：然后在右侧编辑区域编写代码并保存，例如程序员打开数字世界的第一个口令：
    
@@ -277,11 +279,11 @@ scoop update git gcc gdb
 
 **注意：很多教程的方法比较复杂：**
 
-> - 下载安装 `MinGW64` 或 `cygwin` 或 `msys2`，下载安装和设置系统环境变量载时遇到问题、安装时也略微复杂，还要**设置系统环境变量**
+> - 下载安装 `MinGW64` 或 `Cygwin` 或 `msys2`，下载安装和设置系统环境变量载时遇到问题、安装时也略微复杂，还要**设置系统环境变量**
 >   ——其实，本质是通过以上三个应用安装 `GNU` 的 `gcc/gdb`
 
 **本教程简化之处**：
 
 > - **直接安装** `GNU` 的 `gcc/gdb`，不需要通过以上三个或者其它应用；
 > 
-> - 用 `scoop` 自动完成下载安装和设置系统环境变量，**省去了复杂的设置操作**，以后还能**随时更新到最新版本**。
+> - 用 `Scoop` 自动完成下载安装和设置系统环境变量，**省去了复杂的设置操作**，以后还能**随时更新到最新版本**。

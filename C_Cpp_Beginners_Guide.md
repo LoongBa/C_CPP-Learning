@@ -1,6 +1,6 @@
 # C/C++ 运行环境安装配置指南——初学者极简版
 
-此指南主要目的是用**尽可能极简**的方式，帮助初学者**完成 C/C++ 的基础环境搭建**，<mark>三个动作搞定</mark>。
+此指南主要目的是用**尽可能极简**的方式，帮助初学者**完成 C/C++ 的基础环境搭建**，<mark> 三步搞定 </mark>。
 
 ——**尤其是小学生小朋友**😘🥰🤗
 
@@ -30,7 +30,7 @@
 2. **自动安装设置 `gcc`, `gdb`** —— `GNU` 的 `C/C++` 编译器和调试器；
     ——不需要设置环境变量等等，自动完成了
 
-3. **测试一下**，确保安装正确
+3. **测试一下**，确保安装正确；
 
 4. **后续可能用到的：**
    
@@ -67,9 +67,7 @@
 
 没有什么意外的话，稍微等一等就能看到提示完成后续安装。
 
-用 `Scoop` 来安装一些开发常用的工具非常方便，后续会经常用到。
-
-其功能非常强大，远远不止这一点点，建议以后有空多了解一下。
+用 `Scoop` 来安装一些开发常用的工具非常方便，以后会经常用到。其功能非常强大，远远不止这一点点，建议以后有空多了解一下。
 
 > `Scoop` 是一款适用于 `Windows` 系统的 `命令行软件（包）管理工具`，免费、开源：[官网](https://scoop.sh/)、`Github` [开源项目地址](https://link.zhihu.com/?target=https%3A//github.com/ScoopInstaller/Scoop)。
 > 
@@ -79,22 +77,25 @@
 > 其灵感来源于`macOS` 的 `Homebrew` [开源项目地址](https://github.com/Homebrew/brew)，`Mac` 用户就比较熟悉了。
 > 
 > `Scoop` 不仅可用于安装软件包，还可以更新、批量更新，甚至导出安装列表，重装系统后一次性批量安装。
+> 支持很多常用软件，包括 `VSCode`、钉钉、微信等，比如**最强视频音频编码解码**工具：`ffmpeg`。
 > 
 > 尤其**对于开发人员而言**，更方便安装指定版本、安装多个版本、运行指定版本，在很多情况下非常有用。
 
-### 1.3. 切换为国内镜像（可选，推荐）
+### 1.3. 切换为国内镜像（可选，但推荐）
 
 `Scoop` 正常情况下是连接到 `Github.com` 来获取相应的更新数据等等，
 
 因为国内访问 `Github.com` 不稳定，切换为国内镜像会比较方便一些：
 
 ```powershell
-# 配置仓库为国内镜像
+# 配置仓库为国内镜像，感谢 Scoop 团队，感谢国内镜像提供者
 scoop config SCOOP_REPO https://gitee.com/glsnames/scoop-installer
 # 配置主桶为国内镜像
 cd $env:SCOOP\buckets\Main
 git remote set-url origin https://gitee.com/scoop-bucket/main.git
 ```
+
+> 感谢 Scoop 团队，感谢国内镜像提供者👍❤️💕
 
 后面会推荐访问 `Github.com` 的工具 `FastGithub`，虽然**访问速度不快**但至少**能访问**。
 
@@ -167,7 +168,7 @@ scoop update git gcc gdb
 > 
 > 解压缩到本地文件夹，双击运行其中的  `FastGithub.UI.exe`
 
-<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-19-21-09-22-image.png" title="" alt="" width="463">
+<img title="" src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-19-21-09-22-image.png" alt="" width="493">
 
 很多文章中也会推荐其它类似 `FastGithub` 的工具，如 `Steam++` 等，相比之下 `FastGithub` 属于最简单、功能单一的一个。
 

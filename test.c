@@ -22,7 +22,7 @@ bool isPrime(int num) {
     }
     
     for (int i = 5; i * i <= num; i += 6) { // 从 5 开始遍历到 sqrt(num)，步长为 6
-        if (num % i == 0 || num % (i + 2) == 0) { // 如果数能被 i 或 (i+2) 整除，则不是素数
+        if (num % i == 0 || num % (i + 2) == 0) { // 如果数能被i或(i+2)整除，则不是素数
             return false;
         }
     }

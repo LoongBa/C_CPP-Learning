@@ -5,13 +5,15 @@
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
+      "preLaunchTask": "C/C++: 生成活动文件",//调试前执行的任务，就是之前配置的tasks.json中的label字段
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "d:/_Dev_/_Repos_/Github/_CoffeeScholar_/C_CPP-Learning/算法入门练习",
-      "program": "d:/_Dev_/_Repos_/Github/_CoffeeScholar_/C_CPP-Learning/算法入门练习/build/Debug/outDebug",
+      "externalConsole": false,
+      "cwd": "${workspaceFolder}",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "D:\\_Dev_\\_Scoop_\\apps\\mingw\\current\\bin\\gdb.bat",
+      "miDebuggerArgs": "",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

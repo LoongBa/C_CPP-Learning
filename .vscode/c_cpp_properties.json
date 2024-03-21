@@ -12,30 +12,6 @@
             "compilerArgs": [
                 ""
             ]
-        },
-        {
-            "name": "clang",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "cStandard": "c17",
-            "cppStandard": "gnu++17",
-            "intelliSenseMode": "windows-clang-x64",
-            "compilerPath": "D:/_Dev_/_Scoop_/apps/llvm/current/bin/clang++.exe",
-            //"compilerPathInCppPropertiesJson": "D:\\_Dev_\\_Scoop_\\apps\\llvm\\current\\bin\\clang++.exe",
-            "mergeConfigurations": false,
-            "browse": {
-                "path": [
-                    "d:/_Dev_/_Repos_/Github/_CoffeeScholar_/C_CPP-Learning/**",
-                    "${workspaceFolder}"
-                ],
-                "limitSymbolsToIncludedHeaders": true
-            }
         }
     ],
     "version": 4

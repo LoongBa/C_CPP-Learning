@@ -1,3 +1,25 @@
+# 【 C/C++ 新手大礼包 之 三】
+
+龙爸写给**初学 C/C++** 的朋友们的**新手入门指南**，扫平入门的几个大障碍的**极简教程**：
+
+1. **安装 C/C++ 编译环境**：[《C/C++ 运行环境安装配置指南——初学者极简版》](https://github.com/coffeescholar/C_CPP-Learning/blob/main/C_Cpp_Beginners_Guide.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/C_Cpp_Beginners_Guide.pdf)
+
+2. **用 VSCode 写你的第一个 Hello World**：[极简安装、配置中文语言包、C/C++ 扩展](https://github.com/coffeescholar/C_CPP-Learning/blob/main/VSCode_C_Cpp_HelloWorld.md)| [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/VSCode_C_Cpp_HelloWorld.pdf)
+
+3. **算法入门练习题**：[陪小学生学习 C/C++ 练习题](https://github.com/coffeescholar/C_CPP-Learning/blob/main/README.MD)（陆续完善中）
+
+原文发布、维护于龙爸**陪孩子学习 `Python`、`C++` 的练习项目**:
+
+- [coffeescholar/C_CPP-Learning](https://github.com/coffeescholar/C_CPP-Learning)，作者：[爱学习的龙爸](https://github.com/coffeescholar)
+
+- 欢迎意见、建议和帮助，谢谢 🥰💕❤️
+
+- 如果对你有帮助，请支持 Star~ ✨✨✨
+
+- 转载时请保留声明和出处，谢谢 🤝🤝🤝
+
+---
+
 # 陪小学生学习 C/C++ 练习题
 
 基于：《[陪伴小学生学习 Python 笔记：2024 年寒假](https://github.com/xiaohaimiao/Python-Learning/blob/main/README.md)》，
@@ -6,18 +28,15 @@
 
 如果您学习的是 `C/C++`，在查阅前文并跟随进行[算法入门练习](https://github.com/xiaohaimiao/Python-Learning/blob/main/Readme_1.md)、[算法进阶练习](https://github.com/xiaohaimiao/Python-Learning/blob/main/Readme_2.md)时，这里提供了 `C/C++` 版本的代码。
 
-如果需要**安装 C/C++ 编译环境**，请参考我专门**为小学生写的极简教程**：
-
-> [《C/C++ 运行环境安装配置指南——初学者极简版》](https://github.com/coffeescholar/C_CPP-Learning/blob/main/README.MD)
-
 练习题目录如下：
 
-> 注意：为了便于小朋友找到对应的代码文件，我的例子中文件夹、文件名用了中文，但平时编程**不推荐用中文**。
-> 在 `VSCode` 中用 `Code Runner` 插件编译、运行中文文件名的代码毫无问题，但用 `gdb` 调试时会找不到文件。
+> 注意：
 > 
-> 仔细深入测试过，在 `VSCode` 之外的终端直接运行 `gdb` 来调试没有问题，
-> 推测是 `VSCode` 的终端环境配置略有差异（等有空进一步仔细对比，应该能解决），
-> 换了 `Clang` 情况也一样，可见不是简单归咎于 `gdb` 的原因。
+> + 请将示例代码复制粘贴到你的项目中使用（<u>调试模式不支持中文文件名</u>）
+>   ——最好<mark> **自己思考** </mark>、练习。
+> 
+> + 为了便于小朋友找到对应的代码文件，例子中<u>文件夹、文件名用了中文</u>，
+>   ——但平时编程<mark> **不推荐用中文** </mark>。
 
 ---
 

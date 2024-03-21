@@ -195,13 +195,13 @@ scoop update git gcc gdb
 
 如果这时候总是提示网络问题，可以用开源、免费的 `FastGithub` 工具。
 
-因为项目原作者已经删库，下面是众多备份之一：托管在国外 `Github.com`
+因为项目原作者已经删库，下面是众多备份之一：<u>托管在国外</u> `Github.com`
 
 > 源代码项目地址: [GitHub - WangGithubUser/FastGitHub: GitHub加速神器，解决GitHub打不开、用户头像无法加载、Releases无法上传下载、git-clone、git-pull、git-push失败等问题](https://github.com/WangGithubUser/FastGitHub)
 > 
 > 最新 `2.15` 版的压缩包下载：[ Windows 64 位](https://github.com/WangGithubUser/FastGitHub/releases/download/v2.1.5/fastgithub_win-x64.zip)
 
-当然，可能现在还无法稳定访问 Github.com，下面是备份之二：托管在国内 `Gitee.com`
+当然，可能现在还无法稳定访问 Github.com，下面是备份之二：<u>托管在国内</u> `Gitee.com`
 
 > 源代码项目地址：[https://gitee.com/XingYuan55/FastGithub](https://gitee.com/XingYuan55/FastGithub)
 > 
@@ -224,9 +224,7 @@ scoop update git gcc gdb
 
 > 注意：`FastGithub` 工具可以配置为系统服务，在 `Windows` 启动时自动运行，
 > 
-> 这里暂不展开，有兴趣可自行查阅其项目说明，如运行原理、源代码等等：
-> 
-> [GitHub - WangGithubUser/FastGitHub: GitHub加速神器，解决GitHub打不开、用户头像无法加载、Releases无法上传下载、git-clone、git-pull、git-push失败等问题](https://github.com/WangGithubUser/FastGitHub)
+> 这里暂不展开，有兴趣可自行查阅其项目说明，如运行原理、源代码等等。
 
 <u>请注意作者的 **免责声明**</u>：
 
@@ -243,6 +241,6 @@ scoop update git gcc gdb
 
 有很多选择，推荐免费、开源的 `VSCode`——`Visual Studio Code`。
 
-需要的话，还有一份极简教程：
+龙爸继续肝，熬夜用若干头发换了一份极简教程：
 
-[用 VSCode 说出第一个 HelloWorld：极简安装 VSCode，配置中文语言包、C/C++ 扩展](VSCode_C_Cpp_HelloWorld.pdf)
+[用 VSCode 写你的第一个 Hello World：极简安装、配置中文语言包、C/C++ 扩展](VSCode_C_Cpp_HelloWorld.md)

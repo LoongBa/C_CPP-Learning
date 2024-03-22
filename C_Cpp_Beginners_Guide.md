@@ -25,7 +25,7 @@
 
 ——**尤其是小学生小朋友**😘🥰🤗
 
-好多家长朋友很头疼，孩子在学习 C/C++ 的第一步遇到的各种问题不知道怎么解决，例如：
+好多家长朋友很头疼，孩子在学习 `C/C++` 的第一步遇到的各种问题不知道怎么解决，例如：
 
 + 有的是培训机构给了一个比较老旧的安装包，勉勉强强弄了能用，却隐藏了各种问题；
 
@@ -43,8 +43,11 @@
 
 1. **在线安装 `Scoop`** —— 软件包部署和升级工具，以后经常会用到；
 
-2. **自动安装设置 `gcc`, `gdb`** —— `GNU` 的 `C/C++` 编译器和调试器；
-    ——不需要设置环境变量等等，自动完成了
+2. **自动安装设置 `gcc`, `gdb`**
+   
+   —— `GNU` 的 `C/C++` 编译器和调试器
+   
+   ——不需要设置环境变量等等，自动完成了
 
 3. **测试一下**，确保安装正确。
 
@@ -54,7 +57,8 @@
 
 + **更新已经安装的软件包**
 
-+ **解决访问不了 `Github.com` 的问题**：下载、解压缩、运行 `Fastgithub.UI`；
++ **解决访问不了 `Github.com` 的问题**：下载、解压缩、运行 `Fastgithub.UI`
+  
   ——需要的话，后续补充说明。
 
 **下载安装 `VSCode` 并配置 `C/C++ 扩展`**，请自行查阅其它文档
@@ -68,7 +72,10 @@
 有很多种方法，这里只说最简单的：
 
 在 `Windows 10/11` 中，按下 `Win + x` 键，在弹出菜单里选中：`终端`（不要选 `终端管理员`）或 `Windows Powershell`
-<img title="" src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-19-18-21-55-image.png" alt="" width="144"> 左边是 Win11， 右边是 Win10 <img title="" src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-20-00-29-25-屏幕截图%202024-03-20%20002238.png" alt="" width="253">
+
+<img title="" src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-19-18-21-55-image.png" alt="" width="144">       <img title="" src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-20-00-29-25-屏幕截图%202024-03-20%20002238.png" alt="" width="253">
+
+左边是 Win11， 右边是 Win10。
 
 ### 1.2. 在线安装 Scoop
 
@@ -118,7 +125,7 @@
 
 因为国内访问 `Github.com` 不稳定，切换为国内镜像会比较方便一些。
 
-**<mark>如果你之前</mark>用官方的方式安装过** `Scoop`，可以用下面命令切换为国内镜像：
+**<mark> 如果你之前 </mark>用官方的方式安装过** `Scoop`，可以用下面命令切换为国内镜像：
 
 ```powershell
 # 配置仓库为国内镜像，感谢 Scoop 团队，感谢国内镜像提供者
@@ -141,6 +148,9 @@ git remote set-url origin https://gitee.com/scoop-bucket/main.git
 在 `终端（命令行）界面` 粘贴或输入下面命令：
 
 ```powershell
+# 先装一个下载工具（可以跳过）
+scoop install aria2
+# 安装 gcc gdb
 scoop install gcc gdb
 ```
 
@@ -199,19 +209,23 @@ scoop update git gcc gdb
 
 > 源代码项目地址: [GitHub - WangGithubUser/FastGitHub: GitHub加速神器，解决GitHub打不开、用户头像无法加载、Releases无法上传下载、git-clone、git-pull、git-push失败等问题](https://github.com/WangGithubUser/FastGitHub)
 > 
-> 最新 `2.15` 版的压缩包下载：[ Windows 64 位](https://github.com/WangGithubUser/FastGitHub/releases/download/v2.1.5/fastgithub_win-x64.zip)
+> 最新 `2.15` 版的压缩包国外下载：[fastgithub_win-x64.zip](https://github.com/WangGithubUser/FastGitHub/releases/download/v2.1.5/fastgithub_win-x64.zip)
 
-当然，可能现在还无法稳定访问 Github.com，下面是备份之二：<u>托管在国内</u> `Gitee.com`
+当然，可能现在还无法稳定访问 `Github.com`，下面是备份之二：<u>托管在国内</u> `Gitee.com`
 
-> 源代码项目地址：[https://gitee.com/XingYuan55/FastGithub](https://gitee.com/XingYuan55/FastGithub)
+> 源代码项目地址：[uid/FastGithub]([FastGithub: FastGithub](https://gitee.com/uid/FastGithub))
 > 
-> `2.14` 版直接下载地址： [快速启动（解压后打开run.exe）.zip](https://gitee.com/XingYuan55/FastGithub/releases/download/2.1.4-Plus/%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%EF%BC%88%E8%A7%A3%E5%8E%8B%E5%90%8E%E6%89%93%E5%BC%80run.exe%EF%BC%89.zip)
+> `2.14` 版国内直接下载地址： [fastgithub_win-x64.zip](https://gitee.com/uid/FastGithub/releases/download/2.1.4/fastgithub_win-x64.zip)
 
 使用方式：
 
 > 解压缩到本地文件夹，双击运行其中的 `FastGithub.UI.exe`
 
-然后刷新一下 `Github.com` 上的页面，看到下面的实时流量统计图，说明已经起作用了：
+然后访问一下 `Github.com` 上的页面，例如：
+
+> 爱学习的龙爸 https://github.com/coffeescholar
+
+看到下面的实时流量统计图，说明已经起作用了：
 
 <img title="" src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-19-21-09-22-image.png" alt="" width="493">
 

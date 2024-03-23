@@ -8,7 +8,7 @@
 
 3. **算法入门练习题**：[陪小学生学习 C/C++ 练习题](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/README.MD)（陆续完善中）
 
-4. **方便设置 Path 环境变量的脚本**：在 Path 环境变量中查看、查找、添加、删除——[使用说明](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/CBeginnerHelper/Readme.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Readme.pdf)
+4. **方便设置 Path 环境变量的脚本**：在 Path 环境变量中查看、查找、添加、删除——[使用说明](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Readme.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Readme.pdf)
 
 原文发布、维护于龙爸**陪孩子学习 `Python`、`C++` 的练习项目**:
 

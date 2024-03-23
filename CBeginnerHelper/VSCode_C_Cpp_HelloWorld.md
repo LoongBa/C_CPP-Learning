@@ -6,7 +6,7 @@
 
 2. **用 VSCode 写你的第一个 Hello World**：[极简安装、配置中文语言包、C/C++ 扩展](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.md)| [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.pdf)
 
-3. **算法入门练习题**：[陪小学生学习 C/C++ 练习题](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/README.MD)（陆续完善中）
+3. **算法入门练习题**：[陪小学生学习 C/C++ 练习题](https://github.com/coffeescholar/C_CPP-Learning)（陆续完善中）
 
 4. **方便设置 Path 环境变量的脚本**：在 Path 环境变量中查看、查找、添加、删除——[使用说明](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Readme.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Readme.pdf)
 

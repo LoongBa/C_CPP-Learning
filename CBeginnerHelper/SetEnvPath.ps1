@@ -1,13 +1,14 @@
 # 读取脚本的运行参数。其中默认参数是路径，可选参数是删除开关 -remove 或 -r
 param (
     [Parameter(Mandatory = $false)]
-    [string]$Path = $PSScriptRoot, # 设置默认值为当前脚本的运行路径
+#    [string]$Path = $PSScriptRoot, # 设置默认值为当前脚本保存路径
+    [string]$Path = (Get-Location).Path, # 设置默认值为运行当前脚本的工作路径
     [Alias('r')]        # 移除开关的别名
-    [switch]$Remove, # 移除开关
+    [switch]$Remove,    # 移除开关
     [Alias('s')]        # 搜索开关的别名
-    [switch]$Search, # 搜索开关
+    [switch]$Search,    # 搜索开关
     [Alias('a')]        # 添加开关的别名
-    [switch]$Add, # 添加开关
+    [switch]$Add,       # 添加开关
     [Alias('h')]        # 帮助开关的别名
     [switch]$Help       # 帮助开关
 )
@@ -18,7 +19,7 @@ function Write-UserName {
         $Color = [System.ConsoleColor]::Red
     }
     else {
-        $Color = [System.ConsoleColor]::RedYellow
+        $Color = [System.ConsoleColor]::Yellow
     }
     Write-Host "【$targetName】" -NoNewline -ForegroundColor $Color
 }
@@ -170,6 +171,19 @@ function Set-EnvironmentTarget {
     return $target, $targetName
 }
 
+# 如果运行参数中包含 -Help 或 -h，则输出帮助信息并退出
+if($Help) {
+    # 输出帮助信息
+    Write-Host "帮助信息："
+    Write-Host "本脚本用于快速查看/设置 [用户/系统] 的 Path 环境变量。"
+    Write-Host "  [path]        指定路径，如果不指定则取当前工作路径；"
+    Write-Host "  -Add 或 -a    添加路径到环境变量；"
+    Write-Host "  -Remove 或 -r 从环境变量中删除中移除路径；"
+    Write-Host "  -Search 或 -s 搜索环境变量中是否存在路径；"
+    Write-Host "  -Help 或 -h   显示帮助信息；"
+    Write-Host "注意：运行当前脚本的权限，决定操作用户级还是系统级的环境变量。"
+    exit
+}
 # 主程序开始，全局设置开始
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
 $target, $targetName = Set-EnvironmentTarget -isAdmin $isAdmin
@@ -200,18 +214,6 @@ switch ($true) {
     $Search {
         # 调用函数，搜索路径
         Search-Path $Path
-        exit
-    }
-    $Help {
-        # 输出帮助信息
-        Write-Host "帮助信息："
-        Write-Host "本脚本用于快速查看/设置 [用户/系统] 的 Path 环境变量。"
-        Write-Host "  [path]        指定路径，如果不指定则取当前路径；"
-        Write-Host "  -Add 或 -a    添加路径到环境变量；"
-        Write-Host "  -Remove 或 -r 从环境变量中删除中移除路径；"
-        Write-Host "  -Search 或 -s 搜索环境变量中是否存在路径；"
-        Write-Host "  -Help 或 -h   显示帮助信息；"
-        Write-Host "注意：运行当前脚本的权限，决定操作用户级还是系统级的环境变量。"
         exit
     }
     default {

@@ -24,7 +24,24 @@
 
 # 方便设置 Path 环境变量的脚本 使用说明
 
-> 目的：运行脚本，自动 **添加/删除** <u>当前目录</u> 或 <u>指定目录</u> 到 `Path` 环境变量。
+> 目的：运行脚本，自动 **添加/删除** <u>当前工作目录</u> 或 <u>指定目录</u> 到 `Path` 环境变量。
+
+可以很方便地设置 `C/C++` 编译器所在的路径到环境变量 `Path` 中，
+
+例如，复制保存脚本的文件夹路径，按下快捷键组合 `Win + X`，
+
+在菜单中选择 `终端管理员` ，随后切换到保存脚本的文件夹，运行：
+
+```powershell
+cd D:\_Dev_\_Repos_\Github\_CoffeeScholar_\C_CPP-Learning\CBeginnerHelper
+.\SetEnvPath.ps1 D:\_Dev_\C_CPP\gcc\13.2.0\bin
+```
+
+> 用 `cd` 命令切换当前目录到脚本所在的目录：`你的脚本实际路径`
+> 
+> 要设置的路径改为你的实际路径：`D:_Dev_\C_CPP\gcc\13.2.0\bin`
+
+
 
 **简单说明：**
 
@@ -40,7 +57,7 @@
 
 > 注意：
 > 
-> 1. 如果不指定路径，则默认取`脚本当前所在的路径`；
+> 1. 如果不指定路径，则默认取 `运行脚本时的工作路径`，而不是 `保存脚本的路径`；
 > 
 > 2. 如果当前以用户身份运行，则所有操作针对 `【用户级别】` 的环境变量，否则针对 `【系统级别】` 的环境变量；
 > 
@@ -54,7 +71,9 @@
 .\SetEnvPath.ps1 [path:指定路径，如果不指定则取当前路径]
 ```
 
-<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-24-07-image.png" title="" alt="" width="583">
+<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-55-31-image.png" title="" alt="" width="877">
+
+> 注意：保存脚本的位置与当前运行路径不同，取当前路径。
 
 ### 2. 添加当前路径
 
@@ -62,7 +81,7 @@
 .\SetEnvPath.ps1 -a [path:指定路径，如果不指定则取当前路径]
 ```
 
-<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-22-01-image.png" title="" alt="" width="580">
+<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-56-42-image.png" title="" alt="" width="875">
 
 ### 3. 搜索当前路径
 
@@ -70,7 +89,7 @@
 .\SetEnvPath.ps1 -s [path:指定路径，如果不指定则取当前路径]
 ```
 
-<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-22-55-image.png" title="" alt="" width="609">
+<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-57-38-image.png" title="" alt="" width="765">
 
 > 其中绿色提示是找到了指定的设置项。
 > 
@@ -84,4 +103,4 @@
 .\SetEnvPath.ps1 -r [path:指定路径，如果不指定则取当前路径]
 ```
 
-<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-23-30-image.png" title="" alt="" width="608">
+<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-58-13-image.png" title="" alt="" width="782">

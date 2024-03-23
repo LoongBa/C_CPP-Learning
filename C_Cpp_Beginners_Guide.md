@@ -4,13 +4,16 @@
 
 1. **安装 C/C++ 编译环境**：[《C/C++ 运行环境安装配置指南——初学者极简版》](https://github.com/coffeescholar/C_CPP-Learning/blob/main/C_Cpp_Beginners_Guide.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/C_Cpp_Beginners_Guide.pdf)
 
-2. **用 VSCode 写你的第一个 HelloWorld**：[极简安装、配置中文语言包、C/C++ 扩展](https://github.com/coffeescholar/C_CPP-Learning/blob/main/VSCode_C_Cpp_HelloWorld.md)| [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/VSCode_C_Cpp_HelloWorld.pdf)
+2. **用 VSCode 写你的第一个 Hello World**：[极简安装、配置中文语言包、C/C++ 扩展](https://github.com/coffeescholar/C_CPP-Learning/blob/main/VSCode_C_Cpp_HelloWorld.md)| [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/VSCode_C_Cpp_HelloWorld.pdf)
 
 3. **算法入门练习题**：[陪小学生学习 C/C++ 练习题](https://github.com/coffeescholar/C_CPP-Learning/blob/main/README.MD)（陆续完善中）
 
+4. **方便设置 Path 环境变量的脚本**：在 Path 环境变量中查看、查找、添加、删除——[使用说明](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Readme.md)
+
 原文发布、维护于龙爸**陪孩子学习 `Python`、`C++` 的练习项目**:
 
-+ [coffeescholar/C_CPP-Learning](https://github.com/coffeescholar/C_CPP-Learning)，作者：[爱学习的龙爸](https://github.com/coffeescholar)
+- [coffeescholar/C_CPP-Learning](https://github.com/coffeescholar/C_CPP-Learning)，作者：[爱学习的龙爸](https://github.com/coffeescholar)
+
 - 欢迎意见、建议和帮助，谢谢 🥰💕❤️
 
 - 如果对你有帮助，请支持 Star~ ✨✨✨

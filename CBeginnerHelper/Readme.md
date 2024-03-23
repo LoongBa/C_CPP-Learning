@@ -1,0 +1,87 @@
+# 前言
+
+龙爸写给**初学 C/C++** 的朋友们的**新手入门指南**，扫平入门的几个大障碍的**极简教程**：
+
+1. **安装 C/C++ 编译环境**：[《C/C++ 运行环境安装配置指南——初学者极简版》](https://github.com/coffeescholar/C_CPP-Learning/blob/main/C_Cpp_Beginners_Guide.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/C_Cpp_Beginners_Guide.pdf)
+
+2. **用 VSCode 写你的第一个 Hello World**：[极简安装、配置中文语言包、C/C++ 扩展](https://github.com/coffeescholar/C_CPP-Learning/blob/main/VSCode_C_Cpp_HelloWorld.md)| [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/VSCode_C_Cpp_HelloWorld.pdf)
+
+3. **算法入门练习题**：[陪小学生学习 C/C++ 练习题](https://github.com/coffeescholar/C_CPP-Learning/blob/main/README.MD)（陆续完善中）
+
+4. **方便设置 Path 环境变量的脚本**：在 Path 环境变量中查看、查找、添加、删除——[使用说明](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Readme.md)
+
+原文发布、维护于龙爸**陪孩子学习 `Python`、`C++` 的练习项目**:
+
+- [coffeescholar/C_CPP-Learning](https://github.com/coffeescholar/C_CPP-Learning)，作者：[爱学习的龙爸](https://github.com/coffeescholar)
+
+- 欢迎意见、建议和帮助，谢谢 🥰💕❤️
+
+- 如果对你有帮助，请支持 Star~ ✨✨✨
+
+- 转载时请保留声明和出处，谢谢 🤝🤝🤝
+
+--- 
+
+# 方便设置 Path 环境变量的脚本 使用说明
+
+> 目的：运行脚本，自动 **添加/删除** <u>当前目录</u> 或 <u>指定目录</u> 到 `Path` 环境变量。
+
+**简单说明：**
+
+1. 如果不指定参数开关，则默认检查 路径 是否存在于 `Path` 环境变量；
+
+2. 开关 `-a` 或 `-add` 将 路径 添加到 `Path` 环境变量；
+
+3. 开关 `-s` 或 `-search` 将在 `Path` 环境变量中搜索路径；
+
+4. 开关 `-r` 或 `-remove` 将在 `Path` 环境变量中删除路径；
+
+5. 开关 `-h` 或 `-help` 将显示本信息。
+
+> 注意：
+> 
+> 1. 如果不指定路径，则默认取`脚本当前所在的路径`；
+> 
+> 2. 如果当前以用户身份运行，则所有操作针对 `【用户级别】` 的环境变量，否则针对 `【系统级别】` 的环境变量；
+> 
+> ——设置 `C/C++` 编译环境，**建议用`【系统级别】`，请用系统管理员权限运行脚本**
+
+## 举例如下
+
+### 1. 确认当前路径是否存在
+
+```powershell
+.\SetEnvPath.ps1 [path:指定路径，如果不指定则取当前路径]
+```
+
+<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-24-07-image.png" title="" alt="" width="583">
+
+### 2. 添加当前路径
+
+```powershell
+.\SetEnvPath.ps1 -a [path:指定路径，如果不指定则取当前路径]
+```
+
+<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-22-01-image.png" title="" alt="" width="580">
+
+### 3. 搜索当前路径
+
+```powershell
+.\SetEnvPath.ps1 -s [path:指定路径，如果不指定则取当前路径]
+```
+
+<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-22-55-image.png" title="" alt="" width="609">
+
+> 其中绿色提示是找到了指定的设置项。
+> 
+> <mark> 黄色提示【文件夹不存在】</mark>，
+> 
+> 表示环境变量中的该设置项，对应的路径在文件系统中并不存在，有可能是无效项。
+
+### 4. 删除当前路径
+
+```powershell
+.\SetEnvPath.ps1 -r [path:指定路径，如果不指定则取当前路径]
+```
+
+<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-23-30-image.png" title="" alt="" width="608">

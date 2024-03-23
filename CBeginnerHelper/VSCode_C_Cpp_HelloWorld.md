@@ -77,17 +77,17 @@
 
 1. **下载后安装**，默认选择为当前用户安装，
    
-   <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-17-20-56-image.png" title="" alt="" width="570">
+   <img title="" src="./assets/2024-03-21-17-20-56-image.png" alt="" width="570">
    
    建议不要安装到默认的 `C` 盘，这里为了演示简化：
    ——路径中不要出现中文，避免以后可能遇到的一些莫名其妙的麻烦，不必要
    （`GNU C/C++` 编译和调试器等等，对 `Windows` 和 中文环境的兼容性虽然已经很好了，但情况很复杂）
    
-   <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-12-49-10-image.png" title="" alt="" width="510">
+   <img title="" src="./assets/2024-03-21-12-49-10-image.png" alt="" width="510">
    
    选中这两项方便一点：
    
-   <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-12-50-20-image.png" title="" alt="" width="509">
+   <img title="" src="./assets/2024-03-21-12-50-20-image.png" alt="" width="509">
 
 2. **安装中文语言包**：
    
@@ -99,18 +99,18 @@
    
    - 选中并在右侧点击 `Install`，安装中文语言包扩展：
    
-   <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-12-45-08-image.png" title="" alt="" width="486">
+   <img title="" src="./assets/2024-03-21-12-45-08-image.png" alt="" width="486">
    
    - 安装完成后，`VSCode` **右下角**会弹出消息提示 `更改语言并重新启动`，
      点击 `Change Language and Restart`，`VSCode` 自动重启后就是中文环境了。
    
-   <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-12-46-01-image.png" title="" alt="" width="489">
+   <img title="" src="./assets/2024-03-21-12-46-01-image.png" alt="" width="489">
 
-3. **安装、配置 `C/C++` 扩展**：
+3. **（此处跳过，由后续自动安装）手动安装、配置 `C/C++` 扩展**：
    
    - `VSCode` 重启后，按下快捷键：`Ctrl-Shift-X` 打开 `Extensions`（扩展），在顶部的搜索栏输入：`C/C++`，
      选择 `C/C++ Extension Pack` 扩展包，并在右侧点 `安装`——偷懒，一次性把相关几个扩展都装了。
-     <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-13-31-01-image.png" title="" alt="" width="461">
+     <img title="" src="./assets/2024-03-21-13-31-01-image.png" alt="" width="461">
    - 这一步，可以装 `C/C++ Runner`，或者 `C/C++ Compile Run` 扩展之一，
      ——它们会自动找到之前安装的 `gcc/g++/gdb` 并自动配置，可以 <u>一键编译、调试和运行 C/C++ 代码</u>，
      省去了很多麻烦，**<mark> 甚至可以省去后面的步骤 </mark>**，
@@ -128,18 +128,26 @@
    > 注意：<mark> 路径和文件名中不要带空格、中文 </mark>，避免后续编译、调试时无法预料的错误。
    > 目前发现，主要是调试时对中文路径和文件名支持仍有问题（不是 `gdb` 的问题，初步测试判断是 `VSCode` 终端环境有差异，待深入排查）。
    
-   <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-15-09-33-image.png" title="" alt="" width="481">
+   <img title="" src="./assets/2024-03-21-15-09-33-image.png" alt="" width="481">
 
 2. **新建文件**：在 `VSCode` 左侧的`资源管理器`中，点右上角的 `新建文件` ，
    
-   <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-15-16-14-image.png" title="" alt="" width="575">
+   <img title="" src="./assets/2024-03-21-15-16-14-image.png" alt="" width="575">
    
    并为创建的文件取个名字比如 `HelloWorld.c`（英文）
    ——注意扩展名用 `.c` 或 `.cpp`，`VSCode` 会自动识别并启用对应语言的扩展：
    
-   <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-15-18-38-image.png" title="" alt="" width="619">
+   <img title="" src="./assets/2024-03-21-15-18-38-image.png" alt="" width="619">
+   
+   右下角提示：
+   
+   <img src="./assets/2024-03-24-00-06-18-image.png" title="" alt="" width="620">
+   
+   ——接受，等扩展安装完毕，然后<mark>【重新启动 VSCode】</mark>——关闭，再打开：
 
-3. **编写代码**：然后在右侧编辑区域编写代码并保存（按 `Ctrl + S`），粘贴下方 `程序员打开数字世界的第一个魔法口令`：
+3. **编写代码**：然后在右侧编辑区域编写代码并保存（按 `Ctrl + S`），
+   
+   粘贴下方 `程序员打开数字世界的第一个魔法口令`：
    
    ```c
    #include <stdio.h>
@@ -150,16 +158,18 @@
 
 4. **运行代码**：点击编辑区域右上角类似播放按钮，运行和调试：
    
-   <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-15-40-08-image.png" title="" alt="" width="477">
+   <img title="" src="./assets/2024-03-21-15-40-08-image.png" alt="" width="477">
 
-5. `VSCode` 提示进行配置，选中默认项：
-   ——`VSCode` 已经识别到之前安装的 `gcc.exe`：
+5. `VSCode` 会**自动提示进行配置**，选中默认项：
+   ——`VSCode` 已经识别到之前安装配置在 Path 环境变量里的 `gcc.exe`：
    
-   <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-15-21-56-image.png" title="" alt="" width="666">
+   ——这里发现<mark> **之前装好扩展必须重启一下** </mark>，否则 `VSCode` 经常无法自动识别 `gcc`
    
-   + **关闭右下角的提示**（短期内用不上 CMake，不妨有个印象）：
+   <img title="" src="./assets/2024-03-21-15-21-56-image.png" alt="" width="666">
+   
+   + **关闭右下角的提示**（来源为 `CMake Tools` 的提示——短期内用不上 `CMake`，有个印象就好）：
      
-     <img title="" src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-15-24-16-image.png" alt="" width="490">
+     <img title="" src="./assets/2024-03-21-15-24-16-image.png" alt="" width="490">
 
 6. 自动产生**任务配置文件**：看看左侧`资源管理器`中多了一个文件夹、两个文件：
    
@@ -171,27 +181,27 @@
 
 7. **查看运行结果**：在底部输出窗口能看到类似下面的运行结果：
    
-   <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-15-42-29-image.png" title="" alt="" width="483">
+   <img title="" src="./assets/2024-03-21-15-42-29-image.png" alt="" width="483">
 
 8. **运行和调试**：选选 `运行`，`VSCode` 会记住上一次的操作，以后不用每次都按旁边的下拉菜单来选择。
    ——运行和调试有什么区别？后续涉及调试代码会讲到：
    
-   <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-15-47-14-image.png" title="" alt="" width="489">
+   <img title="" src="./assets/2024-03-21-15-47-14-image.png" alt="" width="489">
    
    已经了解调试的同学，可以加断点调试测试一下配置是否正常，代码会停在加了断点这一行，并等待处理：
    
-   <img title="" src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-15-44-11-image.png" alt="" width="413">
+   <img title="" src="./assets/96a2022857c51f82cbc1a68addaa0fe1f28a608c.png" alt="" width="413">
 
 9. **完事，收尾**：这时候可以装几个常用扩展（按照前面装语言包的方式）：
    
    + <mark> 必装扩展 </mark>：`Error Lens` ——在出错的代码旁显示错误信息，<mark> 方便定位错误位置 </mark>（默认在终端输出窗口）。
      下面的例子中故意制造了一个错误：
      
-     <img title="" src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-17-54-10-image.png" alt="" width="484">
+     <img title="" src="./assets/2024-03-21-17-54-10-image.png" alt="" width="484">
    
    + <mark> 必装扩展 </mark>：`Error Gutters`——配合上一个扩展，在警告、出错的代码前显示图标：
      
-     <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-18-10-54-image.png" title="" alt="" width="505">
+     <img title="" src="./assets/2024-03-21-18-10-54-image.png" alt="" width="505">
    
    + 推荐扩展：`C/C++ Compile Run`
      ——编译、调试和运行 `C/C++` 代码的帮助扩展，自动配置已经安装的 `gcc/g++/gdb`
@@ -202,12 +212,12 @@
      ——快捷键：`Ctrl + Alt + N`
      这个扩展支持更多的语言，如 `Java`、`C#`、`Python` 等等，因为同时在学习 `Python` 所以装了这个扩展：
      
-     <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-16-09-04-image.png" title="" alt="" width="465">
+     <img title="" src="./assets/2024-03-21-16-09-04-image.png" alt="" width="465">
    
    + 可选扩展：`Indent-Rainbow`——用彩虹色显示缩进，方便对齐——在 `Python` 中非常有用；
      ——类似的，还有<u>彩虹括号</u>、<u>彩虹花括号</u>，已经内置了：
      
-     <img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-18-19-44-image.png" title="" alt="" width="579">
+     <img title="" src="./assets/2024-03-21-18-19-44-image.png" alt="" width="579">
    
    + 更多更多，层出不穷，眼花缭乱，还是缓一缓，专注于【<mark>先入门</mark>】吧。
 
@@ -224,11 +234,11 @@ void main() {
 
 运行，查看下方输出内容中出现看不懂的乱字符，俗称乱码，其实是终端环境没能正常识别字符集的问题：
 
-<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-18-30-39-image.png" title="" alt="" width="485">
+<img title="" src="./assets/2024-03-21-18-30-39-image.png" alt="" width="485">
 
 解决方法有两种：
 
-+ 改变 VSCode 的终端相关设置——在其它电脑上运行需要重新配置；
++ 改变 `VSCode` 的终端相关设置——在其它电脑上运行需要重新配置；
 
 + 代码中进行处理。
 
@@ -246,18 +256,18 @@ void main() {
 }
 ```
 
-<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-16-16-37-image.png" title="" alt="" width="459">
+<img title="" src="./assets/2024-03-21-16-16-37-image.png" alt="" width="459">
 
 新增的代码中：`chcp 65001` 表示把系统的字符集切换为 `65001 (UTF-8)`，
 ——与 `VSCode` 编辑代码时的默认字符集一致：
 
-<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-16-19-14-image.png" title="" alt="" width="508">
+<img title="" src="./assets/2024-03-21-16-19-14-image.png" alt="" width="508">
 
 所以，如果你的编辑环境的编码为 `GB2312` 的话，代码中的 `65001` 改为 `936`也能正常输出。
 ——当然，最好保持 `UTF-8` 不要改。
 ——以后你会学习到<u>字符集相关的知识</u>，这是很容易出现混乱的若干历史包袱之一，<mark> 程序员常见心魔 </mark>。
 
-<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-21-16-20-56-image.png" title="" alt="" width="604">
+<img title="" src="./assets/2024-03-21-16-20-56-image.png" alt="" width="604">
 
 > `Windows` 系统中默认也是 `936`，
 > 很多教程教你去修改 `Windows` 系统的**默认字符集**为 `Unicode`，
@@ -271,16 +281,19 @@ void main() {
 
 目前已经能让你开始学习了，后续进一步还需要了解和熟悉以下方面的配置：
 
-> c_cpp_properties.json        配置 C/C++ 语言的基本设置
-> launch.json                          配置调试操作相关的设置 
-> tasks.json                             配置编译相关的设置
+> `c_cpp_properties.json`        配置 `C/C++` 语言的基本设置
+> `launch.json`                          配置调试操作相关的设置 
+> `tasks.json`                             配置编译相关的设置
 
 ——具体细节可参考其它教程，有很多很多。
 
 #### 有了 `Scoop`，先顺手装三个强大的工具：
 
 ```powershell
-scoop install aria2 everything ffmpeg
+# 添加一个官方软件包仓库
+scoop bucket add extras
+# 安装两个非常强大的工具
+scoop install everything ffmpeg
 ```
 
 `Everything`，顾名思义，就是 `everything` 的意思，嘿嘿

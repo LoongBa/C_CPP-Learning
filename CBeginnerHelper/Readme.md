@@ -69,7 +69,7 @@ cd D:\_Dev_\_Repos_\Github\_CoffeeScholar_\C_CPP-Learning\CBeginnerHelper
 .\SetEnvPath.ps1 [path:指定路径，如果不指定则取当前路径]
 ```
 
-<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-55-31-image.png" title="" alt="" width="877">
+<img title="" src="./assets/2024-03-23-20-55-31-image.png" alt="" width="877">
 
 > 注意：保存脚本的位置与当前运行路径不同，取当前路径。
 
@@ -79,7 +79,7 @@ cd D:\_Dev_\_Repos_\Github\_CoffeeScholar_\C_CPP-Learning\CBeginnerHelper
 .\SetEnvPath.ps1 -a [path:指定路径，如果不指定则取当前路径]
 ```
 
-<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-56-42-image.png" title="" alt="" width="875">
+<img title="" src="./assets/2024-03-23-20-56-42-image.png" alt="" width="875">
 
 ### 3. 搜索当前路径
 
@@ -87,7 +87,7 @@ cd D:\_Dev_\_Repos_\Github\_CoffeeScholar_\C_CPP-Learning\CBeginnerHelper
 .\SetEnvPath.ps1 -s [path:指定路径，如果不指定则取当前路径]
 ```
 
-<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-57-38-image.png" title="" alt="" width="765">
+<img title="" src="./assets/2024-03-23-20-57-38-image.png" alt="" width="765">
 
 > 其中绿色提示是找到了指定的设置项。
 > 
@@ -101,4 +101,4 @@ cd D:\_Dev_\_Repos_\Github\_CoffeeScholar_\C_CPP-Learning\CBeginnerHelper
 .\SetEnvPath.ps1 -r [path:指定路径，如果不指定则取当前路径]
 ```
 
-<img src="file:///C:/Users/coffe/AppData/Roaming/marktext/images/2024-03-23-20-58-13-image.png" title="" alt="" width="782">
+<img title="" src="./assets/2024-03-23-20-58-13-image.png" alt="" width="782">

@@ -62,16 +62,7 @@
 
 目前为止，与 `Windows` 相关的终端有三种，关系如下：
 
-```mermaid
-graph TB
- A[Windows 相关的终端]
- B[Command Prompt 简称 CMD]
- C[Windows PowerShell 5.1]
- D[PowerShell 7.1 跨平台]
- A --> B
- A --> C
- C --> D
-```
+<img title="" src="./images_Beautiful_Terminal/2024-03-27-23-50-37-image.png" alt="" width="579">
 
 注意：`Windows` 之外的其它系统，还有更多种终端，这里就不展开了。
 
@@ -93,18 +84,7 @@ graph TB
 
 以下是它们之间的关系：
 
-```mermaid
-graph LR
-    A[Windows Terminal]
-    B[CMD: 命令提示符]
-    C[Windows PowerShell 5.1]
-    D[PowerShell 7.1 跨平台]
-    E[WSL: Windows 的 Linux 子系统]
-    A -->|启动和使用| B
-    A -->|启动和使用| C
-    A -->|启动和使用| D
-    A -->|启动和使用| E
-```
+<img src="./images_Beautiful_Terminal/2024-03-27-23-49-58-image.png" title="" alt="" width="640">
 
 `Windows Terminal` 提供了一个**统一的界面**，可以用来启动和使用**多种不同**的命令行工具、终端，并在不同的 Tab 形式窗口中**同时使用**。
 

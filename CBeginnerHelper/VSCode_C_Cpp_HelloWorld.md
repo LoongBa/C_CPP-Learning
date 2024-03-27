@@ -2,13 +2,15 @@
 
 龙爸写给**初学 C/C++** 的朋友们的**新手避坑指南**，扫平入门的几个大障碍的**极简教程**：
 
-1. 《**极简安装配置 C/C++ 编译环境**》：[Github 最新更新](https://link.zhihu.com/?target=https%3A//github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/C_Cpp_Beginners_Guide.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/C_Cpp_Beginners_Guide.pdf) | [知乎专栏](https://zhuanlan.zhihu.com/p/688782325)
+1. 《**极简安装配置 C/C++ 编译环境**》：[Github 最新更新](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/C_Cpp_Beginners_Guide.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/C_Cpp_Beginners_Guide.pdf) | [知乎专栏](https://zhuanlan.zhihu.com/p/688782325)
 
-2. 《**极简安装配置 VSCode：中文、C/C++扩展、乱码**》：[Github 最新更新](https://link.zhihu.com/?target=https%3A//github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.pdf) | [知乎专栏](https://zhuanlan.zhihu.com/p/688869789)
+2. 《**极简安装配置 VSCode：中文、C/C++扩展、乱码**》：[Github 最新更新](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.pdf) | [知乎专栏](https://zhuanlan.zhihu.com/p/688869789)
 
-3. **方便设置 Path 环境变量的脚本**：在 Path 环境变量中查看、查找、添加、删除——[使用说明](https://link.zhihu.com/?target=https%3A//github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Readme.md) | [PDF版下载](https://link.zhihu.com/?target=https%3A//github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Readme.pdf)
+3. 《**美丽的终端：最新 Terminal 美化指南**》：[Github 最新更新](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Beautiful_Terminal.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Beautiful_Terminal.pdf) | [知乎专栏](https://zhuanlan.zhihu.com/p/688869789)
 
-4. **算法入门练习题**（陆续完善中）：《[陪小学生学习 Python 练习题](https://link.zhihu.com/?target=https%3A//github.com/xiaohaimiao/Python-Learning)》、《[陪小学生学习 C/C++ 练习题](https://link.zhihu.com/?target=https%3A//github.com/coffeescholar/C_CPP-Learning)》
+4. **方便设置 Path 环境变量的脚本**：在 Path 环境变量中查看、查找、添加、删除——[使用说明](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Readme.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Readme.pdf)
+
+5. **算法入门练习题**（陆续完善中）：《[陪小学生学习 Python 练习题](https://github.com/xiaohaimiao/Python-Learning)》、《[陪小学生学习 C/C++ 练习题](https://github.com/coffeescholar/C_CPP-Learning)》
 
 原文发布、维护于龙爸**陪孩子学习 `Python`、`C++` 的练习项目**:
 
@@ -20,9 +22,11 @@
 
 - 转载时请保留声明和出处，谢谢 🤝🤝🤝
 
+- 如果是 `Github`、`MarkText`、`PDF` 等，请打开目录方便阅读 😎
+
 ---
 
-# VSCode 极简安装配置指南：中文、C/C++扩展、乱码
+# 极简安装配置 VSCode：中文、C/C++扩展、乱码
 
 > 本教程不同于其它教程，相对更加简单，也不容易出现意外。
 > 
@@ -41,6 +45,12 @@
 > - **用 `Scoop` 自动设置系统环境变量**，**省去了复杂的设置操作**；
 > 
 > - **用 `Scoop` 随时更新到最新版本**。
+
+有一种更简单的安装方式：先安装第三方开发的 VSCode 扩展，用它来完成配置。
+
+——**龙爸不推荐**，因为简单不代表**不知其所以然**。  
+
+——本文的方法虽简单，但**没有跳过、遗漏**应该掌握的基本操作，只纠正了错误、采用了不同的方法。
 
 ---
 
@@ -112,16 +122,9 @@
 
 ### 2.3.（此步跳过，后面自动安装）手动安装、配置 `C/C++` 扩展
 
-- `VSCode` 重启后，按下快捷键：`Ctrl-Shift-X` 打开 `Extensions`（扩展），在顶部的搜索栏输入：`C/C++`，
-  选择 `C/C++ Extension Pack` 扩展包，并在右侧点 `安装`——偷懒，一次性把相关几个扩展都装了。
-  <img title="" src="./assets/2024-03-21-13-31-01-image.png" alt="" width="461">
-- 以后可以装 `C/C++ Runner`，或者 `C/C++ Compile Run` 扩展之一，
-  ——它们会自动找到之前安装的 `gcc/g++/gdb` 并自动配置，可以 <u>一键编译、调试和运行 C/C++ 代码</u>，
-  省去了很多麻烦，**<mark> 甚至可以省去后面的步骤 </mark>**，
-  ——但，**<mark> 暂时不要安装这些扩展 </mark>**，先把基础配置做好，**<mark> 免得以后遇到问题不知道怎么处理 </mark>**。
-  类似的扩展还有：`Code Runner`——不仅可以用于 C/C++，还可用于运行 `Java`、`C#`、`Python` 等等常用开发语言的代码。
+很多教程都会有这一步，本教程在后面步骤会自动安装，此处跳过。
 
-有更多好用的扩展，以后慢慢熟悉、筛选、磨合，选择多了有时候也挺麻烦。
+<img title="" src="./assets/2024-03-21-13-31-01-image.png" alt="" width="461">
 
 ## 3. 编写、运行你的第一段 `C/C++` 代码
 
@@ -239,8 +242,8 @@ void main() {
 + 推荐扩展：`Code Runner`（注意，不是另外一个 `C/C++ Runner`）——同上，二选一即可
   
   ——快捷键：`Ctrl + Alt + N`
-  
-  这个扩展支持更多的语言，如 `Java`、`C#`、`Python` 等等，因为同时在学习 `Python` 所以装了这个扩展：
+
++ 这个扩展支持更多的语言，如 `Java`、`C#`、`Python` 等等，因为同时在学习 `Python` 所以装了这个扩展：
 
 + <img title="" src="./assets/2024-03-21-16-09-04-image.png" alt="" width="465">
 

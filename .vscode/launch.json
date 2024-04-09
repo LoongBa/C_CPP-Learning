@@ -12,7 +12,7 @@
       "cwd": "${workspaceFolder}",
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "MIMode": "gdb",
-      "miDebuggerPath": "D:\\_Dev_\\_Scoop_\\apps\\gdb\\current\\bin\\gdb.exe",
+      "miDebuggerPath": "gdb.exe",
       "miDebuggerArgs": "",
       "setupCommands": [
         {

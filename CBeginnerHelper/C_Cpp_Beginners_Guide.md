@@ -4,7 +4,7 @@
 
 1. 《**极简安装配置 C/C++ 编译环境**》：[Github 最新更新](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/C_Cpp_Beginners_Guide.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/C_Cpp_Beginners_Guide.pdf) | [知乎专栏](https://zhuanlan.zhihu.com/p/688782325)
 
-2. 《**极简安装配置 VSCode：中文、C/C++扩展、乱码**》：[Github 最新更新](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.pdf) | [知乎专栏](https://zhuanlan.zhihu.com/p/688869789)
+2. 《**极简安装配置 VSCode：C/C++扩展、中文乱码**》：[Github 最新更新](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.pdf) | [知乎专栏](https://zhuanlan.zhihu.com/p/688869789)
 
 3. 《**美丽的终端：最新 Terminal 美化指南**》：[Github 最新更新](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Beautiful_Terminal.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Beautiful_Terminal.pdf) | [知乎专栏](https://zhuanlan.zhihu.com/p/688869789)
 
@@ -42,31 +42,35 @@
 
 通过此指南，**用尽可能简单的方式**，指导初学者两步完成 **C/C++ 的编译器、调试器的下载，安装、配置和更新**。
 
+> 本教程不同于其它教程，相对更加简单，也不容易出现意外。
+
+> 但因为面向小学生、初中生小朋友，所以详细步骤会比较详细，超龄的小朋友请根据自身情况适当快进。
+> 
 > 本教程仅针对 `Windows 10/11` 版本，<u>不推荐</u> `Windows 7/XP`，本教程也<u>不考虑</u> `MacOS`、`Linux` 等系统。
+
+现有的几乎所有教程都写的比较复杂，尽量选择较新的学习，因为版本更新后一些配置可能变化了或者不需要了。
+
+**很多教程的方法比较复杂的原因：**
+
+> 下载安装 `MinGW64` 或 `Cygwin` 或 `msys2`，下载安装、设置系统环境变量载时，经常遇到问题，安装过程也略微复杂，还要**设置系统环境变量**。
+
+**本教程简化之处**：
+
+> - **用 `Scoop` 自动下载、安装** `GNU` 的 `gcc/g++/gdb`，不需要通过类似上面的三个应用或者其它应用；
+> 
+> - **用 `Scoop` 自动设置系统环境变量**，**省去了复杂的设置操作**；
+> 
+> - **用 `Scoop` 随时更新到最新版本**。
+
+有一种更简单的安装方式：先安装第三方开发的 VSCode 扩展，用它来完成配置。
+
+——**龙爸不推荐**，因为简单不代表**不知其所以然**。
+
+——本文的方法虽简单，但**没有跳过、遗漏**应该掌握的基本操作，只纠正了错误、采用了不同的方法。
 
 ---
 
-## 主要内容
-
-**主要内容：两步操作**
-
-1. **在线安装 `Scoop`** —— 软件包部署和升级工具，以后经常会用到；
-
-2. **自动下载安装设置 `gcc`, `gdb`**—— `GNU` 的 `C/C++` 编译器和调试器
-   
-   ——不需要设置环境变量，自动完成
-
-3. **测试一下**，确保安装正确。
-
-**扩展：后续可能用到的一点点小技巧：**
-
-+ **更新已经安装的软件包**
-
-+ **解决访问不了 `Github.com` 的问题**：下载、解压缩、运行 `Fastgithub.UI`
-
---- 
-
-## 1. 在线安装 Scoop
+- ## 1. 在线安装 Scoop
 
 ### 1.1. 运行终端
 
@@ -256,4 +260,4 @@ scoop update git gcc gdb
 
 龙爸继续肝，熬夜用若干头发换了一份极简教程：《C/C++ 新手避坑指南》之二
 
-《**极简安装配置 VSCode：中文、C/C++扩展、乱码**》：[Github 最新更新](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.md) | [知乎专栏](VSCode_C_Cpp_HelloWorld.md)
+《**极简安装配置 VSCode：C/C++扩展、中文乱码**》：[Github 最新更新](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.md) | [知乎专栏](VSCode_C_Cpp_HelloWorld.md)

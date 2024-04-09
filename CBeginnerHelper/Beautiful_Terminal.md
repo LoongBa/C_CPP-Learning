@@ -1,10 +1,10 @@
-# 【C/C++ 新手避坑指南】之三
+# 【学习编程避坑指南】之三
 
-龙爸写给**初学 C/C++** 的朋友们的**新手避坑指南**，扫平入门的几个大障碍的**极简教程**：
+龙爸写给**学习编程**的朋友们的**新手避坑指南**，扫平入门的几个大障碍的**极简教程**：
 
 1. 《**极简安装配置 C/C++ 编译环境**》：[Github 最新更新](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/C_Cpp_Beginners_Guide.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/C_Cpp_Beginners_Guide.pdf) | [知乎专栏](https://zhuanlan.zhihu.com/p/688782325)
 
-2. 《**极简安装配置 VSCode：中文、C/C++扩展、乱码**》：[Github 最新更新](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.pdf) | [知乎专栏](https://zhuanlan.zhihu.com/p/688869789)
+2. 《**极简安装配置 VSCode：C/C++扩展、中文乱码**》：[Github 最新更新](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/VSCode_C_Cpp_HelloWorld.pdf) | [知乎专栏](https://zhuanlan.zhihu.com/p/688869789)
 
 3. 《**美丽的终端：最新 Terminal 美化指南**》：[Github 最新更新](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Beautiful_Terminal.md) | [PDF版下载](https://github.com/coffeescholar/C_CPP-Learning/blob/main/CBeginnerHelper/Beautiful_Terminal.pdf) | [知乎专栏](https://zhuanlan.zhihu.com/p/688869789)
 
@@ -28,9 +28,9 @@
 
 > 互联网网络上最麻烦的一点是信息太多，良莠不齐，准确筛选出你所需要的，不得不话一点儿时间、精力，甚至走点儿弯路。
 > 
-> 很多教程还是基于 `Oh-My-Posh 2`，而不是最新版。当初装老版本的时候，也是遇到了不少问题。
+> 很多教程还是基于 `Oh-My-Posh 2`，而不是最新版。而且，当初装老版本的时候，跟着这些教程也是遇到了不少问题。
 > 
-> 现在，虽然针对最新版也陆续出现了一些不错的教程，但龙爸还是考虑辛苦一下重写一份指南，并标记好日期，避免后人再走弯路。
+> 现在，虽然针对最新版也陆续出现了一些不错的教程，但龙爸还是认真重写了一份指南，并标记好日期，避免后人再走弯路。
 > 
 > ——龙爸，于 2024 年 3 月底
 
@@ -194,7 +194,7 @@ scoop info oh-my-posh
 
 #### A. 最简单的方式
 
-在 `PowerShell` 中运行下面的命令：
+在 <mark>**系统管理员权限**</mark> 的 `PowerShell` 中运行下面的命令：
 
 ```powershell
 oh-my-posh font install
@@ -212,11 +212,11 @@ oh-my-posh font install
 
 可见，如果你已经很清楚需要什么字体，**这是最简单的方式**。
 
-#### B. 又见 Scoop
+如果不知道呢？别急，看下去。
 
-是的，`Scoop` 支持安装 `Nerd Fonts`。
+#### B. 很简单的方式：又见 Scoop
 
-首先，需要添加额外的 `bucket`（软件包源）。
+是的，`Scoop` 支持安装 `Nerd Fonts`，只需要添加额外的 `bucket`（软件包源）。
 
 在 `PowerShell` 中执行以下命令，添加名为 `nerd-fonts` 的 `bucket` 然后安装：
 
@@ -225,8 +225,8 @@ oh-my-posh font install
 ```powershell
 # 添加 Nerd 字体源
 scoop bucket add nerd-fonts
-# 安装名为 'DroidSansMono-NF' 的字体
-scoop install DroidSansMono-NF
+# 安装名为 'SourceCodePro-NF' 的字体
+scoop install SourceCodePro-NF
 ```
 
 同样，如果你已经很清楚需要什么字体，已经在使用 `Scoop`，**这也是最简单的方式**。

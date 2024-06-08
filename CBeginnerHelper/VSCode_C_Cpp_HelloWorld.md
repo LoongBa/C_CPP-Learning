@@ -293,11 +293,13 @@ void main() {
 #include <stdio.h>
 #include <stdlib.h>
 
-void main() {
+int main() {
   // 设置控制台输出为UTF-8编码，以支持中文输出
   system("chcp 65001>nul"); 
 
   printf("Hello World! 你好，我来了。");
+
+  return 0;
 }
 ```
 

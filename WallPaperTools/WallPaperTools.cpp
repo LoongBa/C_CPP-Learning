@@ -4,8 +4,7 @@
 #include <iostream>
 
 using namespace std;
-namespace fs = filesystem;
-
+namespace fs = std::filesystem;
 int main()
 {
     system("chcp 65001>nul");

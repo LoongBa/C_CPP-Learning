@@ -6,6 +6,7 @@ import datetime
 from pathlib import Path
 from PIL import Image
 
+AutoOpenFolder = False
 # 获取图片文件的高度和宽度,
 def GetImageSize(filename):
     try:
@@ -37,7 +38,8 @@ def BackupDesktopWallPaper(backupDir):
         os.getenv("APPDATA") + "\\Microsoft\\Windows\\Themes\\TranscodedWallpaper"
     )
     # 执行命令，用资源管理器打开 desktopWallPaperFilename 所在文件夹
-    #os.system("start " + str(str(os.path.dirname(desktopWallPaperFilename))))
+    if AutoOpenFolder:
+        os.system("start " + str(str(os.path.dirname(desktopWallPaperFilename))))
 
     # 构造备份文件名
     newFilename, subDir = ComposeNewFilename(desktopWallPaperFilename, "Desktop_")
@@ -96,14 +98,15 @@ wallpaperDir = (
 )
 
 print("壁纸所在位置：", wallpaperDir)
-os.system("start " + wallpaperDir)
+if AutoOpenFolder:
+    os.system("start " + wallpaperDir)
 
 # 创建目标目录如果它不存在（默认在当前目录下）
 currentDir = Path.cwd()  # 获取当前目录
 targetDir = currentDir / "WallPapers"
 targetDir.mkdir(exist_ok=True)
 
-# 执行命令，用资源管理器打开 WallPapers 文件夹
+# 执行命令，用资源管理器打开 备份文件夹
 os.system("start " + str(targetDir))
 # 输出完整路径，后续仅输出文件名
 print("壁纸备份位置：", targetDir)

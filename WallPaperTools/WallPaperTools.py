@@ -3,6 +3,7 @@
 import os
 import shutil
 import datetime
+import winreg
 from pathlib import Path
 from PIL import Image
 
@@ -37,9 +38,7 @@ def BackupDesktopWallPaper(backupDir):
     desktopWallPaperFilename = (
         os.getenv("APPDATA") + "\\Microsoft\\Windows\\Themes\\TranscodedWallpaper"
     )
-    # 执行命令，用资源管理器打开 desktopWallPaperFilename 所在文件夹
-    if AutoOpenFolder:
-        os.system("start " + str(str(os.path.dirname(desktopWallPaperFilename))))
+    desktopWallPaperFilename = Path(desktopWallPaperFilename)
 
     # 构造备份文件名
     newFilename, subDir = ComposeNewFilename(desktopWallPaperFilename, "Desktop_")
@@ -56,10 +55,16 @@ def BackupDesktopWallPaper(backupDir):
         # 复制当前桌面图片到目标目录，并使用备份文件名
         shutil.copy2(desktopWallPaperFilename, backupFilename)
         print(f"\t桌面壁纸\t{newFilename}\t\033[32m备份完成\033[0m")
-    return backupFilename
+    return desktopWallPaperFilename.parent
 
 # 备份锁屏壁纸到 targetDir 目录下
-def BackupWallPapers(wallpaperDir, targetDir):
+def BackupWallPapers(targetDir):
+    # 读取环境变量 %USERPROFILE% 的值，用于构造完整路径
+    wallpaperDir = (
+        os.getenv("USERPROFILE")
+        + "\\AppData\\Local\\Packages\\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\\LocalState\\Assets"
+    )
+
     i = 0
     # 遍历壁纸目录中的文件
     for fileEntry in Path(wallpaperDir).iterdir():
@@ -86,35 +91,47 @@ def BackupWallPapers(wallpaperDir, targetDir):
                 else:
                     shutil.copy2(fileEntry, newFilename)
                     print("\t\033[32m备份完成\033[0m")
+    return wallpaperDir
+
+# 通过注册表信息，获取用户图片文件夹位置
+def get_user_shell_folders():
+    key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r'Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders')
+    folders = dict([(winreg.EnumValue(key, i)[:2]) for i in range(winreg.QueryInfoKey(key)[1])])
+    return folders.get("My Pictures")
+
+def main():
+    print("壁纸备份工具 V1.00 \n作者：xxx CopyRight 2024\n")
+    print("---------------------------")
+
+    # 获取 Windows 图片目录的路径，用于备份壁纸
+    pictureDir = Path(get_user_shell_folders())       #可能无效的方法：Path(os.path.expanduser('~/Pictures'))
+    # 创建目标目录如果它不存在（默认在当前目录下）
+    if pictureDir.exists():
+        wallpaperBackupDir = pictureDir / "_WallPaper_Backup_"
+        wallpaperBackupDir.mkdir(exist_ok=True)
+    else:
+        currentDir = Path.cwd()  # 获取当前目录
+        wallpaperBackupDir = currentDir / "_WallPaper_Backup_"
+        wallpaperBackupDir.mkdir(exist_ok=True)
+
+    # 备份桌面壁纸
+    desktopWallPaperDir = BackupDesktopWallPaper(wallpaperBackupDir)
+    # 执行命令，用资源管理器打开 desktopWallPaperDir 文件夹
+    if AutoOpenFolder:
+        os.system("start " + desktopWallPaperDir)
+
+    # 备份锁屏壁纸
+    wallpaperDir = BackupWallPapers(wallpaperBackupDir)
+    print("壁纸所在位置：", wallpaperDir)
+    if AutoOpenFolder:
+        os.system("start " + wallpaperDir)
+
+    # 执行命令，用资源管理器打开 备份文件夹
+    os.system("start " + str(wallpaperBackupDir))
+    # 输出完整路径，后续仅输出文件名
+    print("壁纸备份位置：", wallpaperBackupDir)
+    print("---------------------------")
     return
 
-print("壁纸备份工具 V1.00 \n作者：xxx CopyRight 2024\n")
-print("---------------------------")
-
-# 读取环境变量 %USERPROFILE% 的值，用于构造完整路径
-wallpaperDir = (
-    os.getenv("USERPROFILE")
-    + "\\AppData\\Local\\Packages\\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\\LocalState\\Assets"
-)
-
-print("壁纸所在位置：", wallpaperDir)
-if AutoOpenFolder:
-    os.system("start " + wallpaperDir)
-
-# 创建目标目录如果它不存在（默认在当前目录下）
-currentDir = Path.cwd()  # 获取当前目录
-targetDir = currentDir / "WallPapers"
-targetDir.mkdir(exist_ok=True)
-
-# 执行命令，用资源管理器打开 备份文件夹
-os.system("start " + str(targetDir))
-# 输出完整路径，后续仅输出文件名
-print("壁纸备份位置：", targetDir)
-
-# 备份桌面壁纸
-BackupDesktopWallPaper(targetDir)
-
-# 备份锁屏壁纸
-BackupWallPapers(wallpaperDir, targetDir)
-
-print("---------------------------")
+if __name__ == "__main__":
+    main()

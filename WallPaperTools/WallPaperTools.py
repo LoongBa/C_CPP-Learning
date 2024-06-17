@@ -116,21 +116,21 @@ def main():
 
     # 备份桌面壁纸
     desktopWallPaperDir = BackupDesktopWallPaper(wallpaperBackupDir)
-    # 执行命令，用资源管理器打开 desktopWallPaperDir 文件夹
-    if AutoOpenFolder:
-        os.system("start " + desktopWallPaperDir)
-
     # 备份锁屏壁纸
     wallpaperDir = BackupWallPapers(wallpaperBackupDir)
-    print("壁纸所在位置：", wallpaperDir)
-    if AutoOpenFolder:
-        os.system("start " + wallpaperDir)
+
+    # 输出完整路径，后续仅输出文件名
+    print("桌面壁纸所在位置：", desktopWallPaperDir)
+    print("锁屏壁纸所在位置：", wallpaperDir)
+    print("壁纸备份位置：", wallpaperBackupDir)
+    print("---------------------------")
 
     # 执行命令，用资源管理器打开 备份文件夹
     os.system("start " + str(wallpaperBackupDir))
-    # 输出完整路径，后续仅输出文件名
-    print("壁纸备份位置：", wallpaperBackupDir)
-    print("---------------------------")
+    # 执行命令，用资源管理器打开 desktopWallPaperDir 文件夹
+    if AutoOpenFolder:
+        os.system("start " + desktopWallPaperDir)
+        os.system("start " + wallpaperDir)
     return
 
 if __name__ == "__main__":

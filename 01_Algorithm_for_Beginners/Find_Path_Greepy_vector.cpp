@@ -38,6 +38,7 @@ vector<Point> create_map(int n)
     // 这里需要释放内存么？
     // 不能，因为需要返回给调用者，如果这里释放了内存，调用者就无法使用这个内存了
     // 另外，vector 容器会自动释放内存，不需要手动释放内存
+    // vector 向量/矢量 COD 维克托
     return map;
 }
 
@@ -62,7 +63,8 @@ vector<Point> find_path_greepy(vector<Point> map, Point startPoint)
     vector<Point> path = vector<Point>(map_length);
     // 用于标记每个点是否被访问过
     //vector<int> visited = vector<int>(map_length);
-    vector<bool> visited = vector<bool>(map_length); 
+    vector<bool> visited = vector<bool>(map_length);    // 强类型
+    
     // 遍历所有点
     for (int i = 0; i < map_length; i++)
     {

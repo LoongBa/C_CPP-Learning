@@ -6,27 +6,12 @@
                 "${workspaceFolder}/**"
             ],
             "compilerPath": "D:/_Dev_/_Scoop_/apps/gcc/current/bin/g++.exe",
-            "cStandard": "${default}",
-            "cppStandard": "${default}",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
             "intelliSenseMode": "windows-gcc-x64",
             "compilerArgs": [
                 ""
             ]
-        },
-        {
-            "name": "windows-gcc-x64",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "cStandard": "c17",
-            "cppStandard": "gnu++17",
-            "intelliSenseMode": "windows-gcc-x64",
-            "compilerPath": "D:/_Dev_/_Scoop_/apps/gcc/current/bin/gcc.exe"
         }
     ],
     "version": 4

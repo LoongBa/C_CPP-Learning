@@ -2,16 +2,17 @@
 #include <string>
 using namespace std;
 
+int cha = 'a' - 'A';
+
 /**
  * 将字符串转换为大写形式
  * @param str 要转换的字符串
  * @return 转换后的字符串
  */
-string toUpperCase(const string& str) {
-    string result = str;
+string toUpperCase(string result) {
     for (char& c : result) {
         if (c >= 'a' && c <= 'z') {
-            c = c - 'a' + 'A'; // 将小写字母转换为大写字母
+            c = c - cha; // 将小写字母转换为大写字母
         }
     }
     return result;
@@ -26,7 +27,7 @@ string toLowerCase(const string& str) {
     string result = str;
     for (char& c : result) {
         if (c >= 'A' && c <= 'Z') {
-            c = c - 'A' + 'a'; // 将大写字母转换为小写字母
+            c = c + cha; // 将大写字母转换为小写字母
         }
     }
     return result;

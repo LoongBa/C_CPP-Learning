@@ -15,16 +15,16 @@ using namespace std;
 // 用二维向量表示四个方向的变化量
 vector<pair<int, int>> directions = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
 
+// 坐标转索引
 int toIndex(int n, int x, int y)
 {
     return x * n + y;
 }
-
+// 索引转坐标
 pair<int, int> toCoord(int n, int index)
 {
     return {index / n, index % n};
 }
-
 // 检查坐标是否有效
 bool isValid(int n, int x, int y, int newX, int newY, const vector<vector<char>> &maze)
 {

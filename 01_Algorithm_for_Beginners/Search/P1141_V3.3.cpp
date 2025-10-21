@@ -126,7 +126,7 @@ int main()
         }
 
         // 输出当前查询的结果
-        cout << size << endl;
+        cout << size << "\n";
     }
 
     return 0;

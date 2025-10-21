@@ -5,7 +5,7 @@
 #define COLS 5
 
 // 检查迷宫中给定位置是否有效的函数
-int isValid(int maze[ROWS][COLS], int row, int col) {
+int canGo(int maze[ROWS][COLS], int row, int col) {
     // 检查位置是否在迷宫边界内且不是墙
     return (row >= 0 && row < ROWS && col >= 0 && col < COLS && maze[row][col] == 0);
 }
@@ -18,7 +18,7 @@ int solveMaze(int maze[ROWS][COLS], int row, int col, int endRow, int endCol) {
     }
 
     // 检查当前位置是否有效
-    if (isValid(maze, row, col)) {
+    if (canGo(maze, row, col)) {
         // 将当前位置标记为解路径的一部分
         maze[row][col] = 2;
 

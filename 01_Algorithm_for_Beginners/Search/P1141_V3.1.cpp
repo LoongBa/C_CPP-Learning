@@ -27,7 +27,7 @@ pair<int, int> toCoord(int n, int index)
 }
 
 // 检查坐标是否有效
-bool isValid(int n, int x, int y, int newX, int newY, const vector<vector<char>> &maze)
+bool canGo(int n, int x, int y, int newX, int newY, const vector<vector<char>> &maze)
 {
     // 首先检查新坐标是否在迷宫范围内
     if (newX < 0 || newX >= n || newY < 0 || newY >= n)
@@ -110,7 +110,7 @@ int main()
                 int nextX = i + direction.first;
                 int nextY = j + direction.second;
                 int edgeIndex = toIndex(n, nextX, nextY);
-                if (isValid(n, i, j, nextX, nextY, maze))
+                if (canGo(n, i, j, nextX, nextY, maze))
                     adjList[index].push_back(edgeIndex); // 将符合条件的边，加入邻接表
             }
         }

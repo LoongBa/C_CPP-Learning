@@ -15,7 +15,7 @@ using namespace std;
 vector<pair<int, int>> directions = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
 
 // 检查坐标是否有效
-bool isValid(int n, int x, int y, int newX, int newY, const vector<vector<bool>> &visited, const vector<vector<char>> &maze)
+bool canGo(int n, int x, int y, int newX, int newY, const vector<vector<bool>> &visited, const vector<vector<char>> &maze)
 {
     // 首先检查新坐标是否在迷宫范围内
     if (newX < 0 || newX >= n || newY < 0 || newY >= n)
@@ -50,7 +50,7 @@ void dfs(int n, int x, int y, const vector<vector<char>> &maze, vector<vector<bo
         int nextY = y + dir.second;
 
         // 检查新坐标是否有效，如果有效则递归搜索
-        if (isValid(n, x, y, nextX, nextY, visited, maze))
+        if (canGo(n, x, y, nextX, nextY, visited, maze))
             dfs(n, nextX, nextY, maze, visited, group); // 递归调用（利用递归实现栈）
     }
 }

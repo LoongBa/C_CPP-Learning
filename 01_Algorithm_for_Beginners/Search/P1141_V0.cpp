@@ -21,7 +21,7 @@ vector<pair<int, int>> directions = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
 //   newX, newY - 要检查的新坐标
 //   visited - 访问标记数组
 //   maze - 迷宫数据
-bool isValid(int n, int x, int y, int newX, int newY, const vector<vector<bool>> &visited, const vector<vector<char>> &maze)
+bool canGo(int n, int x, int y, int newX, int newY, const vector<vector<bool>> &visited, const vector<vector<char>> &maze)
 {
     // 首先检查新坐标是否在迷宫范围内
     if (newX < 0 || newX >= n || newY < 0 || newY >= n)
@@ -61,7 +61,7 @@ void dfs(int n, int x, int y, const vector<vector<char>> &maze, vector<vector<bo
         int nextY = y + dir.second;
 
         // 检查新坐标是否有效，如果有效则递归搜索
-        if (isValid(n, x, y, nextX, nextY, visited, maze))
+        if (canGo(n, x, y, nextX, nextY, visited, maze))
             dfs(n, nextX, nextY, maze, visited, path);
     }
 }

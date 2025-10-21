@@ -1,148 +1,111 @@
-// https://www.luogu.com.cn/problem/P1141
-// 当前版本为 V4.0：使用并查集优化
 #include <iostream>
 #include <vector>
 #include <utility>
-#include <queue>
-#include <algorithm>
 
 using namespace std;
 
-// 用二维向量表示四个方向的变化量
-vector<pair<int, int>> directions = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+// 方向数组
+const vector<pair<int, int>> directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
 
-// 并查集数据结构
-class UnionFind
+// 判断是否可以到达新位置
+bool canGo(int n, int x, int y, int nextX, int nextY, const vector<vector<char>> &maze)
 {
-private:
-    vector<int> parent;
-    vector<int> size;
-
-public:
-    UnionFind(int n)
+    // 必须先检查边界
+    if (nextX < 0 || nextX >= n || nextY < 0 || nextY >= n)
     {
-        parent.resize(n * n);
-        size.resize(n * n, 1);
-        for (int i = 0; i < n * n; ++i)
-        {
-            parent[i] = i;
-        }
-    }
-
-    int find(int x)
-    {
-        if (parent[x] != x)
-        {
-            parent[x] = find(parent[x]);
-        }
-        return parent[x];
-    }
-
-    void unionSet(int x, int y)
-    {
-        int rootX = find(x);
-        int rootY = find(y);
-        if (rootX != rootY)
-        {
-            if (size[rootX] > size[rootY])
-            {
-                parent[rootY] = rootX;
-                size[rootX] += size[rootY];
-            }
-            else
-            {
-                parent[rootX] = rootY;
-                size[rootY] += size[rootX];
-            }
-        }
-    }
-
-    int getSize(int x)
-    {
-        return size[find(x)];
-    }
-};
-
-// 检查坐标是否有效
-bool isValid(int n, int x, int y, int newX, int newY, const vector<vector<char>> &maze)
-{
-    if (newX < 0 || newX >= n || newY < 0 || newY >= n)
         return false;
-    return maze[newX][newY] != maze[x][y];
+    }
+    // 检查是否可以移动：0只能移动到1，1只能移动到0
+    return maze[x][y] != maze[nextX][nextY];
 }
 
-// 基于队列的BFS函数
-void bfs(int n, int startX, int startY, const vector<vector<char>> &maze, vector<vector<bool>> &visited, UnionFind &uf)
+// 并查集初始化函数
+void init(vector<int> &parent, vector<int> &size, int n)
 {
-    queue<pair<int, int>> q;
-    q.push({startX, startY});
-    visited[startX][startY] = true;
-    int startIndex = startX * n + startY;
-    while (!q.empty())
+    for (int i = 0; i < n; ++i)
     {
-        int x = q.front().first;
-        int y = q.front().second;
-        q.pop();
-        for (const auto &dir : directions)
+        parent[i] = i; // 初始时每个节点都是自己的父节点
+        size[i] = 1;   // 初始时每个连通块大小为1
+    }
+}
+
+// 并查集查找函数（带路径压缩）
+int find(vector<int> &parent, int x)
+{
+    if (parent[x] != x)
+    {
+        parent[x] = find(parent, parent[x]); // 路径压缩
+    }
+    return parent[x];
+}
+
+// 并查集合并函数（按大小合并）
+void unite(vector<int> &parent, vector<int> &size, int x, int y)
+{
+    int rootX = find(parent, x);
+    int rootY = find(parent, y);
+    if (rootX != rootY)
+    {
+        // 按大小合并：小的树合并到大的树下
+        if (size[rootX] < size[rootY])
         {
-            int nextX = x + dir.first;
-            int nextY = y + dir.second;
-            if (isValid(n, x, y, nextX, nextY, maze) && !visited[nextX][nextY])
-            {
-                int currentIndex = x * n + y;
-                int nextIndex = nextX * n + nextY;
-                uf.unionSet(currentIndex, nextIndex);
-                q.push({nextX, nextY});
-                visited[nextX][nextY] = true;
-            }
+            swap(rootX, rootY);
         }
+        parent[rootY] = rootX;
+        size[rootX] += size[rootY];
     }
 }
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     int n, m;
-    cin >> n >> m;
+    cin >> n >> m; // 读入迷宫大小和查询次数
 
     vector<vector<char>> maze(n, vector<char>(n));
-    vector<vector<bool>> visited(n, vector<bool>(n, false));
-    UnionFind uf(n);
-
-    // 读取迷宫数据
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; ++i)
     {
-        string str;
-        cin >> str;
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < n; ++j)
         {
-            maze[i][j] = str[j];
+            cin >> maze[i][j];
         }
     }
 
-    // 预处理所有连通区域
-    for (int i = 0; i < n; i++)
+    // 初始化并查集
+    int totalNodes = n * n;
+    vector<int> parent(totalNodes);
+    vector<int> size(totalNodes);
+    init(parent, size, totalNodes);
+
+    // 构建并查集
+    for (int i = 0; i < n; ++i)
     {
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < n; ++j)
         {
-            if (!visited[i][j])
+            int currentNode = i * n + j;
+            // 检查四个方向
+            for (const auto &dir : directions)
             {
-                bfs(n, i, j, maze, visited, uf);
+                int nextX = i + dir.first;
+                int nextY = j + dir.second;
+                if (canGo(n, i, j, nextX, nextY, maze))
+                {
+                    int neighborNode = nextX * n + nextY;
+                    unite(parent, size, currentNode, neighborNode);
+                }
             }
         }
     }
 
-    // 处理查询
+    // 处理每个查询
     while (m--)
     {
         int x, y;
         cin >> x >> y;
-        --x;
-        --y;
-        int index = x * n + y;
-        cout << uf.getSize(index) << endl;
+        x--;
+        y--; // 转换为0-based坐标
+        int node = x * n + y;
+        int root = find(parent, node);
+        cout << size[root] << endl;
     }
 
     return 0;
